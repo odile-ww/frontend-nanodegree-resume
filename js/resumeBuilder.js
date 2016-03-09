@@ -10,8 +10,8 @@ var bio = {
         "twitter": "@odile_ww",
         "location": "Sofia, Bulgaria"
     },
-    "welcomeMessage": "Hello and Welcome to my Page!",
-    "skills": ["communication", "HTML", "CSS", "management"],
+    "welcomeMessage": "'There is no end to education. It is not that you read a book, pass an examination, and finish with education. The whole of life, from the moment you are born to the moment you die, is a process of learning.'- Jiddu Krishnamurti" + "<br>" + "<br>" +"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?" , 
+    "skills": ["communication", "problem-solving", "team-work", "management", "HTML", "CSS", "Bootstrap","Javascript", "jQuery", "Python"],
     "biopic": "images/me.jpg",
     "display" : function() {
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -24,17 +24,19 @@ var bio = {
         $("#topContacts").append(formattedMobile);
         var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
         $("#topContacts").append(formattedEmail);
-        var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-        $("#topContacts").append(formattedEmail);
+        $("#footerContacts").append(formattedEmail);
         var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
         $("#topContacts").append(formattedTwitter);
+        $("#footerContacts").append(formattedTwitter);
         var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
         $("#topContacts").append(formattedGitHub);
+        $("#footerContacts").append(formattedGitHub);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
         $("#topContacts").append(formattedLocation);
-        var formattedWelcomeMessage = HTMLwelcomeMsg .replace("%data%", bio.welcomeMessage);
-        $("#header").append(formattedWelcomeMessage);
-        $("#header").append(HTMLskillsStart);
+        
+        var formattedWelcomeMessage = HTMLwelcomeMsg .replace("%data%", bio.welcomeMessage);        
+        $("#summary").append(formattedWelcomeMessage);     
+        $("#summary").append(HTMLskillsStart);
         if (bio.skills.length > 0) {
             for (var skill in bio.skills) {
                 var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
