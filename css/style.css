@@ -1,66 +1,107 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding:0;
-  margin:0;
+/* General Styles */
+body {
+  padding: 0;
+  margin: 0;
   font-family: 'Droid Sans', sans-serif;
+  color: #ffffff;
+  background-color: #ededed;
+}
+   
+ul {
+  list-style-type: none;
+}
+
+p {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+img {
+  padding: 10px;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #a40f37;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+span {
+  padding: 5px;
+}
+
+/** HEADER */
+#header
+ {
+  text-align: center;
+  background-color: #323232;
+}
+
+/* Section Classes */
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+  
+.biopic {
+  display: block;
+  margin:  0 auto;
+  max-width: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.page {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
 }
 
 .clear-fix {
   overflow: auto;
 }
 
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
+.center-content {
+  padding: 2.5% 5%;
 }
 
+/* TYPOGRAPHY */
 h1 {
   font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
+  color: #a40f37;
+  line-height: 30px;
   display: inline;
 }
 
+h2, h3 {
+  font-weight: normal;
+  margin: 0;}
+  
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
-}
-
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 1em;
+  padding: 10px;}
+  
 h3 {
-  font-style: italic;
   font-size: 20px;
-  color: #000;
-  line-height: 22px;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
-}
-
-h2,
-h3,
-h4,
-h5 {
-  padding:10px 5%;
-
-}
-
+  letter-spacing: 0.2em;
+  padding: 10px;
+  color: #a40f37;
+  }
+ 
+ #map-heading {
+     color: #a40f37;
+     text-align: center
+ }
 
 .date-text {
   font-style: italic;
@@ -76,96 +117,58 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-}
+/********** TABS **********/
+.tab-list {
+  margin: 0;
+  padding: 0;}
 
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
-
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
-}
-
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
-ul {
+.tab-list li {
+  display: inline-block;
   list-style-type: none;
-}
+  background-color: #a8aba2;
+  /*border-bottom: 3px solid #e5e5e5; */
+  text-transform: uppercase;
+  letter-spacing: 0.2em;}
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
+.tab-list li a {
+  color: #f2f2f2;
+  display: block;
+  padding: 3px 10px 3px 10px;
+  }
+
+/********** HOVER STATES **********/
+.tab-list li.active, .tab-list li.hover {
+  background-color:#e5e5e5;
+  border-bottom: 3px solid #e5e5e5;}
+
+.tab-list li.active a, .tab-list li a:hover {
+  color: #666;
+  background-color: #e5e5e5;}
+
+
+/********** PANELS **********/
+.tab-panel {
   display: none;
-}
+  color: #666;
+  background-color: #e5e5e5;
+  min-height: 150px;
+  overflow: auto;}
 
-img {
-  padding: 10px;
-}
+.tab-panel.active {
+  display: block;
+  }
 
-span {
-  padding: 5px;
-}
+.tab-panel p {
+    margin: 20px;  
+  }
+
+/* FOOTER */
 
 #lets-connect {
   text-align: center;
+  background-color:#323232;;
 }
 
 /* Media queries to handle various device widths */
