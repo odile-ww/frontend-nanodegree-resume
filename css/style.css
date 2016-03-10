@@ -16,13 +16,6 @@ p {
   line-height: 21px;
 }
 
-img {
-  padding: 10px;
-  display: inline;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 a {
   color: #a40f37;
   text-decoration: none;
@@ -32,13 +25,19 @@ a {
 
 span {
   padding: 5px;
+  display: inline-block;
 }
+
+hr {
+  margin: 0.1em auto;
+   }
 
 /** HEADER */
 #header
  {
   text-align: center;
   background-color: #323232;
+  margin-top: 0;
 }
 
 /* Section Classes */
@@ -54,23 +53,24 @@ span {
 .biopic {
   display: block;
   margin:  0 auto;
-  max-width: 50%;
+  border: 2px solid #a40f37;
+  max-width: 100%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
 
+#role {
+    font-size: 18px;
+}
+
 .page {
     max-width: 800px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto;
 }
 
 .clear-fix {
   overflow: auto;
-}
-
-.center-content {
-  padding: 2.5% 5%;
 }
 
 /* TYPOGRAPHY */
@@ -78,12 +78,14 @@ h1 {
   font-size: 40px;
   color: #a40f37;
   line-height: 30px;
-  display: inline;
+  display: inline-block;
+  
 }
 
 h2, h3 {
   font-weight: normal;
-  margin: 0;}
+  margin: 0;
+  }
   
 h2 {
   font-size: 22px;
@@ -119,10 +121,16 @@ h3 {
   float: right;
 }
 
+.red-text {
+    background-color: #a40f37;
+    border-radius: 15px 50px;
+}
+
 /********** TABS **********/
 .tab-list {
   margin: 0;
-  padding: 0;}
+  padding: 0;
+  }
 
 .tab-list li {
   display: inline-block;
@@ -130,7 +138,8 @@ h3 {
   background-color: #a8aba2;
   /*border-bottom: 3px solid #e5e5e5; */
   text-transform: uppercase;
-  letter-spacing: 0.2em;}
+  letter-spacing: 0.2em;
+  }
 
 .tab-list li a {
   color: #f2f2f2;
@@ -161,14 +170,29 @@ h3 {
   }
 
 .tab-panel p {
-    margin: 20px;  
+    margin: 10px;  
   }
+
+/* MAP */
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+  color: #323232
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
 
 /* FOOTER */
 
 #lets-connect {
   text-align: center;
-  background-color:#323232;;
+  background-color:#323232;
+  min-height: 50px;
 }
 
 /* Media queries to handle various device widths */
@@ -195,18 +219,6 @@ h3 {
   .welcome-message {
     display: none;
   }
-}
-
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
