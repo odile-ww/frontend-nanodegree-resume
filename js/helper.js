@@ -37,10 +37,10 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<h4>%data%</h4>';
+var HTMLprojectTitle = '<h3><a>%data%</a></h3>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%" class="project-pic"/>';
+var HTMLprojectDescription = '<br><p>%data%</p>';
+var HTMLprojectImage = '<img src="%data%" class="project-pic">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<h4>%data%';

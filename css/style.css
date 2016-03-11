@@ -67,9 +67,14 @@ hr {
   overflow: auto;
 }
 
+#projects {
+    text-align: center;
+}
+
 .project-pic {
   display: inline-block;
-  margin:  0 auto;
+  margin: 10px 10px 20px;
+  text-align: center;
 }
 
 .date-text {
@@ -112,8 +117,9 @@ h3 {
   font-size: 20px;
   letter-spacing: 0.2em;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
   color: #323232;
+  text-align: center;
   }
   
   h4 {
@@ -213,6 +219,7 @@ a {
   text-align: center;
   background-color:#323232;
   min-height: 50px;
+  margin-top: 5px;
 }
 
 /* Media queries to handle various device widths */
@@ -235,9 +242,6 @@ a {
   }
   .biopic {
     width: 150px;
-  }
-  .welcome-message {
-    display: none;
   }
 }
 
