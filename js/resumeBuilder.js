@@ -11,7 +11,7 @@ var bio = {
         "location": "Sofia, Bulgaria"
     },
     "welcomeMessage": "'There is no end to education. It is not that you read a book, pass an examination, and finish with education. The whole of life, from the moment you are born to the moment you die, is a process of learning.'- Jiddu Krishnamurti" + "<br>" + "<br>" +"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?" , 
-    "skills": ["communication", "problem-solving", "team-work", "management", "HTML", "CSS", "Bootstrap","Javascript", "jQuery", "Python"],
+    "skills": ["HTML", "CSS", "Bootstrap","Javascript", "jQuery", "Python", "communication", "problem-solving", "team-work", "management", "planning & budgeting"],
     "biopic": "images/me.jpg",
     "display" : function() {
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -125,12 +125,12 @@ var projects = {
                 $(".project-entry:last").append(formattedProjectTitle);
                 var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projectList[project].dates);
                 $(".project-entry:last").append(formattedProjectDates);
-                var formattedProjectDescr = HTMLprojectDescription.replace("%data%", projects.projectList[project].description);
-                $(".project-entry:last").append(formattedProjectDescr);
                 if (projects.projectList[project].images.length > 0) {
                     for (var img in projects.projectList[project].images) {
                         var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.projectList[project].images[img]);
                         $(".project-entry:last").append(formattedprojectImage);
+                var formattedProjectDescr = HTMLprojectDescription.replace("%data%", projects.projectList[project].description);
+                $(".project-entry:last").append(formattedProjectDescr);
                 }
             }
         }  
@@ -143,7 +143,7 @@ var education = {
 		"name": "Bucharest State University",
         "location": "Bucharest, Romania",
         "degree": "Bachelor of Arts",
-		"majors": ["Spanish", "French"],
+		"majors": ["Spanish &#38; French"],
 		"dates": "1998 - 2002",
         "url": "http://lls.unibuc.ro/"
 		
@@ -151,7 +151,7 @@ var education = {
 		"name": "Bucharest State University",
         "location": "Bucharest, Romania",
         "degree": "Postgraduate Certificate",
-		"majors": ["Public Relations", "Media"],
+		"majors": ["Public Relations &#38; Media"],
 		"dates": "2004 - 2005",
 		"url": "http://www.unibuc.ro/facultati/jurnalism/index.php"
 	}],

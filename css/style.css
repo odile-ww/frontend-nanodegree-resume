@@ -13,14 +13,8 @@ ul {
 
 p {
   font-size: 16px;
-  line-height: 21px;
-}
-
-a {
-  color: #a40f37;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
+  padding: 10px;
+  text-align: justify;
 }
 
 span {
@@ -73,6 +67,27 @@ hr {
   overflow: auto;
 }
 
+.project-pic {
+  display: inline-block;
+  margin:  0 auto;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  float: left;
+  padding-left: 10px;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  float: right;
+  padding-right: 10px;
+}
+
 /* TYPOGRAPHY */
 h1 {
   font-size: 40px;
@@ -82,7 +97,7 @@ h1 {
   
 }
 
-h2, h3 {
+h2, h3, h4 {
   font-weight: normal;
   margin: 0;
   }
@@ -97,33 +112,38 @@ h3 {
   font-size: 20px;
   letter-spacing: 0.2em;
   padding: 10px;
-  color: #a40f37;
+  margin-top: 5px;
+  color: #323232;
   }
+  
+  h4 {
+  font-size: 18px;
+  padding: 10px;
+  color: #323232;
+  display: block;
+  }
+  
+  strong {
+    font-size: 18px;
+    padding: 10px;
+    color: #a8aba2;
+}
  
  #map-heading {
      color: #a40f37;
      text-align: center
  }
 
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
-}
-
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-}
-
 .red-text {
     background-color: #a40f37;
     border-radius: 15px 50px;
+}
+
+a {
+  color: #1199c3;
+  text-decoration: none;
+  display: block;
+  padding-left: 10px;
 }
 
 /********** TABS **********/
@@ -136,15 +156,16 @@ h3 {
   display: inline-block;
   list-style-type: none;
   background-color: #a8aba2;
-  /*border-bottom: 3px solid #e5e5e5; */
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  text-align: justify;
   }
 
 .tab-list li a {
   color: #f2f2f2;
   display: block;
   padding: 3px 10px 3px 10px;
+  text-decoration: none;
   }
 
 /********** HOVER STATES **********/
@@ -154,7 +175,8 @@ h3 {
 
 .tab-list li.active a, .tab-list li a:hover {
   color: #666;
-  background-color: #e5e5e5;}
+  background-color: #e5e5e5;
+  }
 
 
 /********** PANELS **********/
@@ -163,15 +185,13 @@ h3 {
   color: #666;
   background-color: #e5e5e5;
   min-height: 150px;
-  overflow: auto;}
+  overflow: auto;
+  }
 
 .tab-panel.active {
   display: block;
-  }
-
-.tab-panel p {
-    margin: 10px;  
-  }
+  padding: 10px;
+}
 
 /* MAP */
 #map {
