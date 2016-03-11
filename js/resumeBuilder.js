@@ -129,10 +129,10 @@ var projects = {
                     for (var img in projects.projectList[project].images) {
                         var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.projectList[project].images[img]);
                         $(".project-entry:last").append(formattedprojectImage);
-                var formattedProjectDescr = HTMLprojectDescription.replace("%data%", projects.projectList[project].description);
-                $(".project-entry:last").append(formattedProjectDescr);
                 }
             }
+                var formattedProjectDescr = HTMLprojectDescription.replace("%data%", projects.projectList[project].description);
+                $(".project-entry:last").append(formattedProjectDescr);
         }  
         }    
     }
