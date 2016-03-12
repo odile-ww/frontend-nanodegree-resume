@@ -36,15 +36,15 @@ h1 {
 h2 {
     font-size: 22px;
     text-transform: uppercase;
-    line-height: 1em;
-    padding: 10px;
+    line-height: 0.5em;
+    padding: 5px;
+    vertical-align: middle;
 }
 
 h3 {
     font-size: 20px;
     letter-spacing: 0.2em;
     padding: 10px;
-    margin-top: 10px;
     color: #323232;
     text-align: center;
 }
@@ -167,7 +167,7 @@ a {
 .tab-list li a {
     color: #f2f2f2;
     display: block;
-    padding: 3px 10px 3px 10px;
+    padding: 3px;
     text-decoration: none;
 }
 
@@ -189,13 +189,12 @@ a {
     display: none;
     color: #666;
     background-color: #e5e5e5;
-    min-height: 150px;
+    min-height: 100px;
     overflow: auto;
 }
 
 .tab-panel.active {
     display: block;
-    padding: 10px;
 }
 
 /* Map */
