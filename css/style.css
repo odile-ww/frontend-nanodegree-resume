@@ -1,70 +1,124 @@
-/* General Styles */
+/* General styes (applied to various HTML tags) */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Droid Sans', sans-serif;
-  color: #ffffff;
-  background-color: #ededed;
+    padding: 0;
+    margin: 0;
+    font-family: "Droid Sans", sans-serif;
+    color: #fff;
+    background-color: #ededed;
 }
-   
+
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 p {
-  font-size: 16px;
-  padding: 10px;
-  text-align: justify;
+    font-size: 16px;
+    padding: 10px;
+    text-align: justify;
 }
 
 span {
-  padding: 5px;
-  display: inline-block;
+    padding: 5px;
+    display: inline-block;
 }
 
 hr {
-  margin: 0.1em auto;
-   }
-
-/** HEADER */
-#header
- {
-  text-align: center;
-  background-color: #323232;
-  margin-top: 0;
+    margin: 0.1em auto;
 }
 
-/* Section Classes */
+h1 {
+    font-size: 40px;
+    color: #a40f37;
+    line-height: 30px;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    padding: 10px;
+    margin-top: 10px;
+    color: #323232;
+    text-align: center;
+}
+
+h4 {
+    font-size: 18px;
+    padding: 10px;
+    color: #323232;
+    display: block;
+}
+
+strong {
+    font-size: 18px;
+    padding: 10px;
+    color: #a8aba2;
+}
+
+a {
+    color: #1199c3;
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+}
+
+/* Header & footer styles */
 .flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 5px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
 }
-  
+
+.clear-fix {
+    overflow: auto;
+}
+
+.red-text {
+    background-color: #a40f37;
+    border-radius: 15px 50px;
+}
+
+#header {
+    text-align: center;
+    background-color: #323232;
+    margin-top: 0;
+}
+
 .biopic {
-  display: block;
-  margin:  0 auto;
-  border: 2px solid #a40f37;
-  max-width: 100%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+    display: block;
+    margin: 5px auto;
+    border: 2px solid #a40f37;
+    max-width: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 
 #role {
     font-size: 18px;
 }
 
+#lets-connect {
+    text-align: center;
+    background-color: #323232;
+    min-height: 50px;
+    margin-top: 20px;
+}
+
+/* General Section Styles */
 .page {
     max-width: 800px;
     margin: 0 auto;
-}
-
-.clear-fix {
-  overflow: auto;
 }
 
 #projects {
@@ -72,182 +126,122 @@ hr {
 }
 
 .project-pic {
-  display: inline-block;
-  margin: 10px 10px 20px;
-  text-align: center;
+    display: inline-block;
+    margin: 10px 10px 20px;
+    text-align: center;
 }
 
 .date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  float: left;
-  padding-left: 10px;
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    float: left;
+    padding-left: 10px;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  float: right;
-  padding-right: 10px;
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    float: right;
+    padding-right: 10px;
 }
 
-/* TYPOGRAPHY */
-h1 {
-  font-size: 40px;
-  color: #a40f37;
-  line-height: 30px;
-  display: inline-block;
-  
-}
+/* The following styles which apply to the panels are from the book "Javascript and jQuery - Interactive Front-End Web Development" by John Duckett. Some changes were made to fit the overall vision for the resume and the color palette */
 
-h2, h3, h4 {
-  font-weight: normal;
-  margin: 0;
-  }
-  
-h2 {
-  font-size: 22px;
-  text-transform: uppercase;
-  line-height: 1em;
-  padding: 10px;}
-  
-h3 {
-  font-size: 20px;
-  letter-spacing: 0.2em;
-  padding: 10px;
-  margin-top: 10px;
-  color: #323232;
-  text-align: center;
-  }
-  
-  h4 {
-  font-size: 18px;
-  padding: 10px;
-  color: #323232;
-  display: block;
-  }
-  
-  strong {
-    font-size: 18px;
-    padding: 10px;
-    color: #a8aba2;
-}
- 
- #map-heading {
-     color: #a40f37;
-     text-align: center
- }
-
-.red-text {
-    background-color: #a40f37;
-    border-radius: 15px 50px;
-}
-
-a {
-  color: #1199c3;
-  text-decoration: none;
-  display: block;
-  padding-left: 10px;
-}
-
-/********** TABS **********/
+/* Tabs */
 .tab-list {
-  margin: 0;
-  padding: 0;
-  }
+    margin: 0;
+    padding: 0;
+}
 
 .tab-list li {
-  display: inline-block;
-  list-style-type: none;
-  background-color: #a8aba2;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  text-align: justify;
-  }
-
-.tab-list li a {
-  color: #f2f2f2;
-  display: block;
-  padding: 3px 10px 3px 10px;
-  text-decoration: none;
-  }
-
-/********** HOVER STATES **********/
-.tab-list li.active, .tab-list li.hover {
-  background-color:#e5e5e5;
-  border-bottom: 3px solid #e5e5e5;}
-
-.tab-list li.active a, .tab-list li a:hover {
-  color: #666;
-  background-color: #e5e5e5;
-  }
-
-
-/********** PANELS **********/
-.tab-panel {
-  display: none;
-  color: #666;
-  background-color: #e5e5e5;
-  min-height: 150px;
-  overflow: auto;
-  }
-
-.tab-panel.active {
-  display: block;
-  padding: 10px;
+    display: inline-block;
+    list-style-type: none;
+    background-color: #a8aba2;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: justify;
 }
 
-/* MAP */
+.tab-list li a {
+    color: #f2f2f2;
+    display: block;
+    padding: 3px 10px 3px 10px;
+    text-decoration: none;
+}
+
+/* Hover States */
+.tab-list li.active,
+.tab-list li.hover {
+    background-color: #e5e5e5;
+    border-bottom: 3px solid #e5e5e5;
+}
+
+.tab-list li.active a,
+.tab-list li a:hover {
+    color: #666;
+    background-color: #e5e5e5;
+}
+
+/* Panels */
+.tab-panel {
+    display: none;
+    color: #666;
+    background-color: #e5e5e5;
+    min-height: 150px;
+    overflow: auto;
+}
+
+.tab-panel.active {
+    display: block;
+    padding: 10px;
+}
+
+/* Map */
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-  color: #323232
+    display: block;
+    height: 100%;
+    margin: 0 5%;
+    color: #323232
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
-/* FOOTER */
-
-#lets-connect {
-  text-align: center;
-  background-color:#323232;
-  min-height: 50px;
-  margin-top: 5px;
+#map-heading {
+    color: #a40f37;
+    text-align: center
 }
 
 /* Media queries to handle various device widths */
-
 @media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+    #lets-connect {
+        margin-top: 5%;
+    }
 }
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+@media only screen and (max-width: 900px) {
+    .biopic {
+        width: 175px;
+    }
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
+    #lets-connect {
+        margin-top: 10%;
+    }
+    .biopic {
+        width: 150px;
+    }
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
+    #skills-h3,
+    .biopic {
+        display: block;
+    }
 }
