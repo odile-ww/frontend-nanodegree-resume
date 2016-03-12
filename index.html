@@ -1,125 +1,86 @@
 <!DOCTYPE html>
-<!-- Example site: http://www.pascalvangemert.nl/#/profile -->
-
-<!--
-This is an HTML document. It contains information about how elements in the website
-are arranged. In other words, it describes the layout of a website.
-
-I can't wait to see the resumes you put together!
-
-Cameron Pittman, Udacity Course Developer
--->
-
-<!--
-The <head> of a website generally links to important resources the page will
-need to load. You'll see a lot of <link>s to CSS files for styles and
-<scripts> for JavaScript files to build interactions.
--->
 
 <head>
     <!-- This tells the browser how to read the document. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Tells the browser what the title of this page should be. -->
     <title>Resume</title>
-
     <!-- Import Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet'>
-
     <!-- Import Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <!-- Load the page styles. -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!--
-  jQuery is a common JavaScript library for reading and making changes to the
-  Document Object Model (DOM). The DOM is a tree that contains information
-  about what is actually visible on a website.
-
-  While HTML is a static document, the browser converts HTML to the
-  DOM and the DOM can change. In fact, JavaScript's power comes from
-  its ability to manipulate the DOM, which is essentially a JavaScript
-  object. When JavaScript makes something interesting happen on a
-  website, it's likely the action happened because JavaScript changed
-  the DOM. jQuery is fast and easy to use, but it doesn't do anything
-  you can't accomplish with vanilla (regular) JavaScript.
-  -->
-
+    <!-- Import jQuery and helper.js-->
     <script src="js/jQuery.js"></script>
-
-    <!-- More on helper.js in the class -->
+    <!-- Script provided by teachers. It contains helper functions that create DOM elements and  placeholders to be populated and appended to the site dinamically, via resumeBuider.js -->
     <script src="js/helper.js"></script>
-
-    <!--
-  Uncomment the <script> tag below when you're ready to add an interactive
-  Google Map to your resume!
-  -->
+    <!--Script that adds an interactive Google Map to the resume!-->
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-
-    <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
     <div id="main">
-        <!--
-    Everything from here to the <script> tag below is the skeleton of your
-    website. Your code will add information to each of the sections of the
-    resume below. You can pretty easily figure out what each section will
-    display by looking at the id or at what's written between the <h2> tags.
-    -->
+        <!-- Header -->
         <div id="header" class="center-content clear-fix">
             <ul id="topContacts" class="flex-box"></ul>
-        </div>        
-        
+        </div>
         <section class="page">
-        <!-- Scaffolding for the tabs layout -->
-        <div class="tabs">
-
-            <!-- Navigation for the tabs -->
-            <ul class="tab-list">
-                <li class="active"><a class="tab-control" href="#summary"><h2>Summary</h2></a></li>
-                <li><a class="tab-control" href="#workExperience"><h2>Work Experience</h2></a></li>
-                <li><a class="tab-control center-content" href="#projects"><h2>Projects</h2></a></li>
-                <li><a class="tab-control" href="#education"><h2>Education</h2></a></li>
-            </ul>
-            <div id="summary" class="tab-panel active">
+            <!-- Scaffolding for the tabs layout -->
+            <div class="tabs">
+                <!-- Navigation for the tabs -->
+                <ul class="tab-list">
+                    <li class="active">
+                        <a class="tab-control" href="#summary">
+                            <h2>Summary</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tab-control" href="#workExperience">
+                            <h2>Work Experience</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tab-control center-content" href="#projects">
+                            <h2>Projects</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tab-control" href="#education">
+                            <h2>Education</h2>
+                        </a>
+                    </li>
+                </ul>
+                <div id="summary" class="tab-panel active"></div>
+                <div id="workExperience" class="tab-panel"></div>
+                <div id="projects" class="tab-panel"></div>
+                <div id="education" class="tab-panel"></div>
             </div>
-            <div id="workExperience" class="tab-panel">
+            <div id="mapDiv">
+                <h2 id="map-heading">Where I've Lived and Worked</h2>
             </div>
-            <div id="projects" class="tab-panel">
-            </div>
-            <div id="education" class="tab-panel">
-            </div>
-        </div>
-
-        <div id="mapDiv">
-            <h2 id="map-heading">Where I've Lived and Worked</h2>
-        </div>
-        
         </section>
-        
         <!--Footer -->
         <div id="lets-connect" class="center-content clear-fix">
             <h2 class="center-text">Let's Connect</h2>
-            <ul id="footerContacts" class="flex-box">
-            </ul>
+            <ul id="footerContacts" class="flex-box"></ul>
         </div>
-
     </div>
-    <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
+  <!--
+  resumeBuilder.js, contains code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
-  <script src="js/resumeBuilder.js"></script>
-     <!--
+    <script src="js/resumeBuilder.js"></script>
+  <!--
   The folowing is a script from the book "Javascript and jQuery - Interactive Front-End Web Development" by John Duckett.
   -->
     <script src="js/tabs.js"></script>
+  <!--
+  Script that checks whether information has been generated for and appended to different page sections.
+  -->
     <script type="text/javascript">
-        
         if (document.getElementsByClassName('flex-item').length === 0) {
             document.getElementById('topContacts').style.backgroundColor = 'black';
         }
